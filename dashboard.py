@@ -184,7 +184,7 @@ def main():
                 owns_cars_global = comparision_df["FLAG_OWN_CAR_No"].value_counts().to_frame()
                 owns_cars_global = owns_cars_global.rename(columns={"FLAG_OWN_CAR_No": "Owns a car?"})
                 owns_cars_global.index = ["No", "Yes"]
-                fig4 = px.bar(owns_cars_global, x=owns_cars_global.index, y=["Owns a car?"], title="All the clients who own a car")
+                fig4 = px.bar(owns_cars_global, x=owns_cars_global.index, y="count", title="All the clients who own a car")
                 st.plotly_chart(fig4, use_container_width=True)
 
             with right:
@@ -193,7 +193,7 @@ def main():
                 owns_realty_global = comparision_df["FLAG_OWN_REALTY_Yes"].value_counts().to_frame()
                 owns_realty_global = owns_realty_global.rename(columns={"FLAG_OWN_REALTY_Yes": "Owns a property?"})
                 owns_realty_global.index = ["Yes", "No"]
-                fig5 = px.bar(owns_realty_global, x=owns_realty_global.index, y=["Owns a property?"], title="All the clients that own a property.")
+                fig5 = px.bar(owns_realty_global, x=owns_realty_global.index, y="count", title="All the clients that own a property.")
                 st.plotly_chart(fig5)
 
 
