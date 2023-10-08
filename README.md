@@ -3,7 +3,7 @@
 ## Overview
 This application was developped as a part of my Master's in Data Science with Openclassrooms.
 The code for the dashboard and the dockerfile can be found in this repository although the dashboard is deployed
-using `stteramlit cloud` and can be found [here](https://client-loan-dashboard-p7.streamlit.app/).
+using `streamlit cloud` and can be found [here](https://client-loan-dashboard-p7.streamlit.app/).
 
 ## Usage
 - Click the link mentioned above to use the interactive dashboard. Type in a client ID to search the database for an existing client and retrieve the information
