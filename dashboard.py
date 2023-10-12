@@ -2,6 +2,7 @@ import requests
 import pandas as pd
 import joblib
 import streamlit as st
+from PIL import Image 
 
 st.set_page_config(layout="wide")
 import matplotlib
@@ -21,6 +22,8 @@ from sklearn.preprocessing import MinMaxScaler
 if "button_clicked" not in st.session_state:
     st.session_state.button_clicked = False
 
+
+global_feature_importance = Image.open('feature_importance.png')
 def callback():
     st.session_state.button_clicked = True
 
@@ -125,6 +128,9 @@ def main():
                 )
                 st.plotly_chart(fig2)
 
+            st.write("---")
+            st.markdown("## Global feature importance")
+            st.image(global_feature_importance, caption="Feature importance for all the clients")
             st.write("---")
 
             title = ""
